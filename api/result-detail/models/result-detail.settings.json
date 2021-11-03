@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "result_details",
+  "info": {
+    "name": "Result Detail"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "result": {
+      "model": "result"
+    },
+    "question": {
+      "model": "question"
+    },
+    "answer": {
+      "model": "answer"
+    }
+  }
+}

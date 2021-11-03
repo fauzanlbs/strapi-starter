@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "name": "Question"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "questioner": {
+      "model": "questioner"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "answer_type": {
+      "type": "enumeration",
+      "enum": [
+        "single",
+        "multiple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questioners",
+  "info": {
+    "name": "Questioner"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    }
+  }
+}
