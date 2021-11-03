@@ -2,7 +2,7 @@
   "name": "cofid-cms-api",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Cofit ID CMS",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -27,7 +27,7 @@
     "strapi-utils": "3.6.8"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Fauzan"
   },
   "strapi": {
     "uuid": "d5e80782-ad8a-444e-88b2-02244eb3b582"
