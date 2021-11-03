@@ -289,7 +289,7 @@ const AuthPage = ({ hasAdmin, setHasAdmin }) => {
 
   return (
     <Padded bottom size="md">
-      {/* <PageTitle title="Cofit-ID" /> */}
+      <PageTitle title="Cofit-ID" />
       <NavTopRightWrapper>
         <LocaleToggle isLogged className="localeDropdownMenuNotLogged" />
       </NavTopRightWrapper>

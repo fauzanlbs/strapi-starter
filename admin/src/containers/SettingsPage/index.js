@@ -97,7 +97,7 @@ function SettingsPage() {
 
   return (
     <SettingsSearchHeaderProvider value={{ toggleHeaderSearch }}>
-      <PageTitle title={settingTitle} />
+      <PageTitle title="Cofit-ID" />
       <Wrapper>
         <BackHeader onClick={goBack} />
 

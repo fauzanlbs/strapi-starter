@@ -108,7 +108,7 @@ const HomePage = ({ history: { push } }) => {
   return (
     <>
       <FormattedMessage id="HomePage.helmet.title">
-        {title => <PageTitle title={title} />}
+        {title => <PageTitle title="Cofit-ID" />}
       </FormattedMessage>
       <Container className="container-fluid">
         <div className="row">
