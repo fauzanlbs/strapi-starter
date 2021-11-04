@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "risk_levels",
+  "info": {
+    "name": "Risk Level"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    }
+  }
+}

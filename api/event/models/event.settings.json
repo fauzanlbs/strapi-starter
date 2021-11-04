@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "Event"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "event_type": {
+      "model": "event-type"
+    },
+    "name": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "start_time": {
+      "type": "time"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "end_time": {
+      "type": "time"
+    },
+    "location_name": {
+      "type": "string"
+    },
+    "location_detail": {
+      "type": "text"
+    },
+    "lat": {
+      "type": "decimal"
+    },
+    "long": {
+      "type": "decimal"
+    },
+    "recurring_event": {
+      "type": "enumeration",
+      "enum": [
+        "daily",
+        "weekly",
+        "monthly"
+      ]
+    },
+    "max_capacity": {
+      "type": "integer"
+    },
+    "privacy": {
+      "type": "enumeration",
+      "enum": [
+        "public",
+        "private"
+      ]
+    },
+    "private_password": {
+      "type": "password"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  }
+}

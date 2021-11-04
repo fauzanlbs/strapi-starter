@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "name": "Profile",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profile_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "current_occupancy": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "vaccine_status": {
+      "type": "string"
+    },
+    "pcr_date": {
+      "type": "date"
+    },
+    "swab_date": {
+      "type": "date"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "risk_level": {
+      "model": "risk-level"
+    }
+  }
+}

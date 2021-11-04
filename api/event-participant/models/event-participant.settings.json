@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_participants",
+  "info": {
+    "name": "Event Participant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event": {
+      "model": "event"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

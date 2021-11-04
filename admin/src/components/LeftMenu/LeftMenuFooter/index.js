@@ -15,7 +15,7 @@
 
    return (
      <Wrapper>
-       Cofit.id 2021
+
      </Wrapper>
    );
  }
