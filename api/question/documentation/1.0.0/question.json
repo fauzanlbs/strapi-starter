@@ -554,7 +554,8 @@
             "type": "string",
             "enum": [
               "single",
-              "multiple"
+              "multiple",
+              "essay"
             ]
           },
           "published_at": {
@@ -575,7 +576,8 @@
             "type": "string",
             "enum": [
               "single",
-              "multiple"
+              "multiple",
+              "essay"
             ]
           },
           "published_at": {
