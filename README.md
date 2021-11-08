@@ -1,3 +1,3 @@
-# Strapi application
+# Strapi Starter
 
-A quick description of your strapi application
+## Strapi with customize UI
