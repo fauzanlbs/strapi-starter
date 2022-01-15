@@ -51,6 +51,12 @@
     },
     "risk_level": {
       "model": "risk-level"
+    },
+    "total_score": {
+      "type": "integer"
+    },
+    "consequence": {
+      "type": "integer"
     }
   }
 }

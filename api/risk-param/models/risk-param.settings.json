@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "risk_params",
+  "info": {
+    "name": "Risk Param"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "consequence": {
+      "model": "consequence"
+    },
+    "risk_level": {
+      "model": "risk-level"
+    },
+    "min_total_score": {
+      "type": "integer"
+    },
+    "max_total_score": {
+      "type": "integer"
+    },
+    "warning": {
+      "type": "boolean"
+    }
+  }
+}

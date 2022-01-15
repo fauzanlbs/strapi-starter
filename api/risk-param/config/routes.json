@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/risk-params",
+      "handler": "risk-param.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/risk-params/count",
+      "handler": "risk-param.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/risk-params/:id",
+      "handler": "risk-param.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/risk-params",
+      "handler": "risk-param.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/risk-params/:id",
+      "handler": "risk-param.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/risk-params/:id",
+      "handler": "risk-param.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

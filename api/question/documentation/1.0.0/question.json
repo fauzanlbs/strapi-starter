@@ -558,6 +558,9 @@
               "essay"
             ]
           },
+          "desc_id": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -579,6 +582,9 @@
               "multiple",
               "essay"
             ]
+          },
+          "desc_id": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

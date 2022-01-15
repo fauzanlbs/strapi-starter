@@ -682,6 +682,12 @@
               }
             }
           },
+          "total_score": {
+            "type": "integer"
+          },
+          "consequence": {
+            "type": "integer"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -718,6 +724,12 @@
           },
           "risk_level": {
             "type": "string"
+          },
+          "total_score": {
+            "type": "integer"
+          },
+          "consequence": {
+            "type": "integer"
           },
           "published_at": {
             "type": "string",

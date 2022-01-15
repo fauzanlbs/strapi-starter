@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/consequences",
+      "handler": "consequence.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/consequences/count",
+      "handler": "consequence.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/consequences/:id",
+      "handler": "consequence.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/consequences",
+      "handler": "consequence.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/consequences/:id",
+      "handler": "consequence.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/consequences/:id",
+      "handler": "consequence.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

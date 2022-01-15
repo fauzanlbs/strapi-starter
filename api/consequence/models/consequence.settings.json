@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "answers",
+  "collectionName": "consequences",
   "info": {
-    "name": "Answer",
-    "description": ""
+    "name": "Consequence"
   },
   "options": {
     "increments": true,
@@ -12,16 +11,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "question": {
-      "model": "question"
+    "Category": {
+      "type": "string"
     },
-    "desc": {
-      "type": "text"
+    "min_interaction": {
+      "type": "integer"
     },
-    "desc_id": {
-      "type": "text"
-    },
-    "score": {
+    "max_interaction": {
       "type": "integer"
     }
   }

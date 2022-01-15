@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/answers": {
+    "/risk-params": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Answer"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Risk-param"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Answer"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Answer"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewAnswer"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/answers/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Risk-param"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewRisk-param"
+              }
+            }
+          }
+        }
       }
     },
-    "/answers/{id}": {
+    "/risk-params/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Answer"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Risk-param"
+        ],
+        "parameters": []
+      }
+    },
+    "/risk-params/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Risk-param"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Answer"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Risk-param"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAnswer"
+                "$ref": "#/components/schemas/NewRisk-param"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Risk-param"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Answer": {
+      "Risk-param": {
         "required": [
           "id"
         ],
@@ -522,7 +535,7 @@
           "id": {
             "type": "string"
           },
-          "question": {
+          "consequence": {
             "required": [
               "id"
             ],
@@ -530,21 +543,38 @@
               "id": {
                 "type": "string"
               },
-              "questioner": {
+              "Category": {
+                "type": "string"
+              },
+              "min_interaction": {
+                "type": "integer"
+              },
+              "max_interaction": {
+                "type": "integer"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "risk_level": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
                 "type": "string"
               },
               "desc": {
-                "type": "string"
-              },
-              "answer_type": {
-                "type": "string",
-                "enum": [
-                  "single",
-                  "multiple",
-                  "essay"
-                ]
-              },
-              "desc_id": {
                 "type": "string"
               },
               "published_at": {
@@ -558,14 +588,14 @@
               }
             }
           },
-          "desc": {
-            "type": "string"
-          },
-          "desc_id": {
-            "type": "string"
-          },
-          "score": {
+          "min_total_score": {
             "type": "integer"
+          },
+          "max_total_score": {
+            "type": "integer"
+          },
+          "warning": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -573,19 +603,22 @@
           }
         }
       },
-      "NewAnswer": {
+      "NewRisk-param": {
         "properties": {
-          "question": {
+          "consequence": {
             "type": "string"
           },
-          "desc": {
+          "risk_level": {
             "type": "string"
           },
-          "desc_id": {
-            "type": "string"
-          },
-          "score": {
+          "min_total_score": {
             "type": "integer"
+          },
+          "max_total_score": {
+            "type": "integer"
+          },
+          "warning": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -601,9 +634,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Answer"
-    }
-  ]
+  "tags": []
 }

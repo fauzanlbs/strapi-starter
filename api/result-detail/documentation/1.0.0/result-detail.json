@@ -585,6 +585,9 @@
                   "essay"
                 ]
               },
+              "desc_id": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -609,6 +612,12 @@
               },
               "desc": {
                 "type": "string"
+              },
+              "desc_id": {
+                "type": "string"
+              },
+              "score": {
+                "type": "integer"
               },
               "published_at": {
                 "type": "string"

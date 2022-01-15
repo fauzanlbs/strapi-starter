@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/answers": {
+    "/consequences": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Answer"
+                    "$ref": "#/components/schemas/Consequence"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Consequence"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Answer"
+                  "$ref": "#/components/schemas/Consequence"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Consequence"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAnswer"
+                "$ref": "#/components/schemas/NewConsequence"
               }
             }
           }
         }
       }
     },
-    "/answers/count": {
+    "/consequences/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Consequence"
         ],
         "parameters": []
       }
     },
-    "/answers/{id}": {
+    "/consequences/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Answer"
+                  "$ref": "#/components/schemas/Consequence"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Consequence"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Answer"
+                  "$ref": "#/components/schemas/Consequence"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Consequence"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAnswer"
+                "$ref": "#/components/schemas/NewConsequence"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Answer"
+          "Consequence"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Answer": {
+      "Consequence": {
         "required": [
           "id"
         ],
@@ -522,49 +522,13 @@
           "id": {
             "type": "string"
           },
-          "question": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "questioner": {
-                "type": "string"
-              },
-              "desc": {
-                "type": "string"
-              },
-              "answer_type": {
-                "type": "string",
-                "enum": [
-                  "single",
-                  "multiple",
-                  "essay"
-                ]
-              },
-              "desc_id": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "desc": {
+          "Category": {
             "type": "string"
           },
-          "desc_id": {
-            "type": "string"
+          "min_interaction": {
+            "type": "integer"
           },
-          "score": {
+          "max_interaction": {
             "type": "integer"
           },
           "published_at": {
@@ -573,18 +537,15 @@
           }
         }
       },
-      "NewAnswer": {
+      "NewConsequence": {
         "properties": {
-          "question": {
+          "Category": {
             "type": "string"
           },
-          "desc": {
-            "type": "string"
+          "min_interaction": {
+            "type": "integer"
           },
-          "desc_id": {
-            "type": "string"
-          },
-          "score": {
+          "max_interaction": {
             "type": "integer"
           },
           "published_at": {
@@ -603,7 +564,7 @@
   },
   "tags": [
     {
-      "name": "Answer"
+      "name": "Consequence"
     }
   ]
 }
